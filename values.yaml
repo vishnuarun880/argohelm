@@ -1,0 +1,40 @@
+replicaCount: 1
+
+image:
+  repository: muhnishmalk/git
+  tag: 31
+
+service:
+  type: NodePort
+  port: 3000
+  targetPort: 3000
+  nodePort: 30000
+
+serviceAccount:
+  create: false
+
+autoscaling:
+  enabled: false
+
+ingress:
+  enabled: false
+
+resources: {}
+
+livenessProbe:
+  httpGet:
+    path: /
+    port: 3000
+
+readinessProbe:
+  httpGet:
+    path: /
+    port: 3000
+
+volumes:
+  - name: data-volume
+    emptyDir: {}
+
+volumeMounts:
+  - name: data-volume
+    mountPath: /data
