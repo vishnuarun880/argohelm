@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: muhnishmalk/git
+  repository: vishnuarunwrk/git
   tag: 31
 
 service:
