@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: vishnuarunwrk/git
-  tag: 31
+  tag: 5
 
 service:
   type: NodePort
